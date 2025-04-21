@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 796464614721710446}
   - component: {fileID: 796464614721710447}
   - component: {fileID: 5829166629720868302}
-  - component: {fileID: 7680333799784566473}
+  - component: {fileID: 7358364933015946444}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Platform
@@ -373,7 +373,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!61 &7680333799784566473
+--- !u!61 &7358364933015946444
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -383,7 +383,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e5a599f07e28ca34b8604fa56406ef94, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -407,7 +407,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.110171236}
+  m_Offset: {x: 0.00000017881393, y: -0.11417003}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.7}
@@ -417,7 +417,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.9375, y: 0.21715753}
+  m_Size: {x: 2.0169926, y: 0.20915994}
   m_EdgeRadius: 0
 --- !u!1 &796464614996848182
 GameObject:
