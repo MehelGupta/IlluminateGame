@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoorInteractions : MonoBehaviour
 {
-    public GameObject button;
+    public GameObject door;
     public float interactDistance = 2f;
     private bool nearDoor = false;
     // Start is called before the first frame update
@@ -20,7 +20,7 @@ public class DoorInteractions : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
 
-            if(Vector2.Distance(transform.position, button.transform.position) < interactDistance)
+            if(Vector2.Distance(transform.position, door.transform.position) < interactDistance)
             {
                 nearDoor = true;
             }
