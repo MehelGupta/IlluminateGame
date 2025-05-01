@@ -9,6 +9,7 @@ public class PlayerArrow : MonoBehaviour
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpingPower = 16f;
     private bool isFacingRight = false;
+    public SpriteRenderer spriteRenderer;
 
     private Collider ObjectCollider;
     private bool isGrounded;
@@ -59,9 +60,7 @@ public class PlayerArrow : MonoBehaviour
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
         {
             isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
+            spriteRenderer.flipX = !spriteRenderer.flipX;
         }
     }
 
