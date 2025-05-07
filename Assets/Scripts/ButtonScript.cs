@@ -8,11 +8,27 @@ public class ButtonScript : MonoBehaviour
 
     public void openMenu()
     {
-        pauseMenu.SetActive(true);
-        PauseGame();
+        if(pauseMenu.activeSelf == false)
+        {
+            pauseMenu.SetActive(true);
+            PauseGame();
+        }
+        else if(pauseMenu.activeSelf == true)
+        {
+            pauseMenu.SetActive(false);
+            Time.timeScale = 1;
+        }
     }
     private void PauseGame()
     {
         Time.timeScale = 0;
+    }
+
+    private void Update()
+    {
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            openMenu();
+        }
     }
 }

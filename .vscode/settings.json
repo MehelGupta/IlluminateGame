@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "IlluminateGame.sln"
+    "dotnet.defaultSolution": "Illuminate.sln"
 }
