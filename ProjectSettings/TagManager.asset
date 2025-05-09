@@ -7,6 +7,7 @@ TagManager:
   - Platform
   - Player2
   - Player1
+  - WorldBound
   layers:
   - Default
   - TransparentFX
@@ -58,4 +59,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 2994701315
+    locked: 0
+  - name: UI
+    uniqueID: 3955886767
     locked: 0

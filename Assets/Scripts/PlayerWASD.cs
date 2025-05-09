@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject Player1;
     private float horizontal;
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpingPower = 16f;
     private bool isFacingRight = true;
     public SpriteRenderer spriteRenderer;
+    
 
 
     private Collider ObjectCollider;
@@ -83,6 +85,12 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = true;
             Debug.Log("Player is grounded!");
         }
+        if(collision.gameObject.CompareTag("WorldBound"))
+        {
+            Debug.Log("LALALALALALALALAl");
+            Player1.transform.position = new Vector3(-400,-164,-2496);
+            
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision)
@@ -93,5 +101,6 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Player is no longer grounded!");
         }
     }
+
     
 }

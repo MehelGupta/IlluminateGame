@@ -26,8 +26,9 @@ public class ButtonScript : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKey(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
+            Debug.Log("open using esca[pe]");
             openMenu();
         }
     }
