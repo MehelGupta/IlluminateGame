@@ -18,13 +18,13 @@ public class DoorInteractions : MonoBehaviour
     {
        if(Input.GetKeyDown(KeyCode.E) && player1NearDoor)
        {
-            Debug.Log("Player1 Can Enter the Door (when you code it lmao)");
+            Debug.Log("Player1 Can Enter the Door");
             player1.SetActive(false);
             
        } 
        if(Input.GetKeyDown(KeyCode.RightShift) && player2NearDoor)
        {
-            Debug.Log("Player2 Can Enter the Door (when you code it lmao)");
+            Debug.Log("Player2 Can Enter the Door");
             player2.SetActive(false);
        }
 
