@@ -3205,7 +3205,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &765599418
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3530,7 +3530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  jumpingPower: 30
+  jumpingPower: 24
   spriteRenderer: {fileID: 951507494}
   rb: {fileID: 951507491}
   fallZone: -170
@@ -10699,6 +10699,7 @@ MonoBehaviour:
   eTextRedcat: {fileID: 853643311}
   eTextBluecat: {fileID: 462104128}
   interactDistance: 300
+  nextLevel: Level2
 --- !u!61 &1334030169
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11573,7 +11574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  jumpingPower: 30
+  jumpingPower: 24
   spriteRenderer: {fileID: 1648467393}
   rb: {fileID: 1648467391}
   fallZone: -170

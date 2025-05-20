@@ -14,6 +14,7 @@ public class DoorInteractions : MonoBehaviour
     private bool player1NearDoor = false;
     private bool player2NearDoor = false;
     // Start is called before the first frame update
+    public string nextLevel;
     void Update()
     {
        if(Input.GetKeyDown(KeyCode.E) && player1NearDoor)
@@ -30,7 +31,7 @@ public class DoorInteractions : MonoBehaviour
 
        if(player1.activeSelf == false && player2.activeSelf == false)
        {
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene(nextLevel);
        }
     }
     private void OnTriggerEnter2D(Collider2D collision)

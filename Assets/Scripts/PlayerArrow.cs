@@ -16,6 +16,7 @@ public class PlayerArrow : MonoBehaviour
     public Transform playerSpawnPoint;
     //platforms and jumping
     private bool isGrounded;
+    private int jumpsLeft = 2;
 
     
 
@@ -45,8 +46,9 @@ public class PlayerArrow : MonoBehaviour
            horizontal = 0f; 
         }
 
-        if (Input.GetKey(KeyCode.UpArrow) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && jumpsLeft > 0)
         {
+            jumpsLeft -= 1;
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
 
@@ -84,6 +86,7 @@ public class PlayerArrow : MonoBehaviour
         if (collision.gameObject.CompareTag("Platform"))
         {
             isGrounded = true;
+            jumpsLeft = 2;
             Debug.Log("Player 2 is grounded!");
         }
     }

@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform playerSpawnPoint;
     //platforms and jumping
     private bool isGrounded;
+    private int jumpsLeft = 2;
 
     void Update()
     {
@@ -29,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector3.zero;
             Respawn();
         }
-        //Player xy movement
+        //Player x movement
         if(Input.GetKey(KeyCode.A))
         {
            horizontal = -2f; 
@@ -47,8 +48,10 @@ public class PlayerMovement : MonoBehaviour
            horizontal = 0f; 
         }
 
-        if (Input.GetKey(KeyCode.W) && isGrounded)
+        //player y movement
+        if (Input.GetKeyDown(KeyCode.W) && jumpsLeft > 0)
         {
+            jumpsLeft -= 1;
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
 
@@ -86,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Platform"))
         {
             isGrounded = true;
+            jumpsLeft = 2;
             Debug.Log("Player is grounded!");
         }   
     }
